@@ -23,4 +23,4 @@ print(string_info("Hello, Teacher!"))
 print(is_contains("TEACHER", ["master", "chef", "sir", "lord"]))
 print(string_info("Ragnarok"))
 
-print(f"Количество вызовов: {calls}")
+print(calls)
