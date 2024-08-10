@@ -1,9 +1,23 @@
-my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-start_pos = 0
-while start_pos < len(my_list):
-    if my_list[start_pos] < 0:
-        break
-    if my_list[start_pos] > 0:
-        print(my_list[start_pos])
-    start_pos = start_pos + 1
-    
+# 1.Функция с параметрами по умолчанию:
+def print_params(a=1, b='строка', c=True):
+    print(a, b, c)
+
+
+print_params()
+print_params(0, 6)
+print_params(22, 23, 25)
+
+# Проверяем вызовы b = 25 и c = [1,2,3]
+print_params(b=25)
+print_params(c=[1, 2, 3])
+
+# 2.Распаковка параметров:
+values_list = [123, False, 'Вселенная']
+values_dict = {'a': 42, 'b': 'world', 'c': [1, 2, 3]}
+
+print_params(*values_list)
+print_params(**values_dict)
+
+# 3.Распаковка + отдельные параметры:
+values_list_2 = [123.45, 'Ойкумена']
+print_params(*values_list_2, 42)
